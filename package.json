@@ -26,7 +26,7 @@
     "embla-carousel-react": "^8.1.6",
     "lucide-react": "^0.408.0",
     "moment": "^2.30.1",
-    "next": "14.2.5",
+    "next": "^14.2.5",
     "next-themes": "^0.3.0",
     "node-polyfill-webpack-plugin": "^4.0.0",
     "razorpay": "^2.9.4",
