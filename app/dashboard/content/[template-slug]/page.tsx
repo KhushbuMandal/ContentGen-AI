@@ -14,9 +14,10 @@ import { useUser } from '@clerk/nextjs'
 import {Moment} from 'moment'
 import moment from 'moment'
 import { TotalUsageContext } from '@/app/(context)/TotalUsageContext'
-import { useRouter } from 'next/navigation'
+// import { useRouter } from 'next/navigation'
 import { UserSubscriptionContext } from '@/app/(context)/UserSubscriptionContext'
 import { UpdateCreditUsageContext } from '@/app/(context)/UpdateCreditUsageContext'
+import { useRouter } from 'next/navigation'
 
 
 interface PROPS{
@@ -35,7 +36,8 @@ function CreateNewContent(props:PROPS) {
  const [loading , setLoading] = useState(false);
  const [aiOutput , setAiOutput] = useState<string>('');
  const {user} = useUser();
- const router = useRouter;
+//  const router = useRouter;
+  const router = useRouter();
  const {totalUsage , setTotalUsage}=useContext(TotalUsageContext);
  const {userSubscription , setUserSubscription}=useContext(UserSubscriptionContext);
  const {updateCreditUsage , setUpdateCreditUsage} = useContext(UpdateCreditUsageContext);
@@ -51,9 +53,8 @@ function CreateNewContent(props:PROPS) {
 
     if (totalUsage >= 50000 && !userSubscription){
       console.log("Please Upgrade")
-      {/*@ts-ignore*/}
       router.push('/dashboard/billing')
-      return;
+      return null;
     }
 
     setLoading(true);
