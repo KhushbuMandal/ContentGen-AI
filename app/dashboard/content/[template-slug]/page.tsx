@@ -17,7 +17,7 @@ import { TotalUsageContext } from '@/app/(context)/TotalUsageContext'
 // import { useRouter } from 'next/navigation'
 import { UserSubscriptionContext } from '@/app/(context)/UserSubscriptionContext'
 import { UpdateCreditUsageContext } from '@/app/(context)/UpdateCreditUsageContext'
-import { useRouter } from 'next/navigation'
+import { redirect, useRouter } from 'next/navigation'
 
 
 interface PROPS{
@@ -37,7 +37,7 @@ function CreateNewContent(props:PROPS) {
  const [aiOutput , setAiOutput] = useState<string>('');
  const {user} = useUser();
 //  const router = useRouter;
-  const router = useRouter();
+  // const router = useRouter();
  const {totalUsage , setTotalUsage}=useContext(TotalUsageContext);
  const {userSubscription , setUserSubscription}=useContext(UserSubscriptionContext);
  const {updateCreditUsage , setUpdateCreditUsage} = useContext(UpdateCreditUsageContext);
@@ -53,7 +53,8 @@ function CreateNewContent(props:PROPS) {
 
     if (totalUsage >= 50000 && !userSubscription){
       console.log("Please Upgrade")
-      router.push('/dashboard/billing')
+      // router.push('/dashboard/billing')
+      redirect('/dashboard/billing')
       return null;
     }
 
