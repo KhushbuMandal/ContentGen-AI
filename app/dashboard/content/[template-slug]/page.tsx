@@ -51,6 +51,7 @@ function CreateNewContent(props:PROPS) {
 
     if (totalUsage >= 50000 && !userSubscription){
       console.log("Please Upgrade")
+      {/*@ts-ignore*/}
       router.push('/dashboard/billing')
       return;
     }
