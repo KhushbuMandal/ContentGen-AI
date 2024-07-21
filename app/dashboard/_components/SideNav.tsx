@@ -1,5 +1,5 @@
 "use client"
-import {  FileClock, Home, Settings, WalletCards } from 'lucide-react'
+import {  ChevronLeftIcon, ChevronRightIcon, FileClock, Home, HomeIcon, MenuIcon, Settings, WalletCards } from 'lucide-react'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import path from 'path'
@@ -89,7 +89,8 @@ function SideNav() {
             //   hover:bg-muted hover:text-foreground 
               prefetch={false}
             >
-              <HomeIcon className="h-5 w-5" />
+              {/* <HomeIcon className="h-5 w-5" /> */}
+              <HomeIcon />
               Home
             </Link>
             <Link
@@ -97,7 +98,8 @@ function SideNav() {
               className={`flex items-center mb-3 gap-3 rounded-md px-3 py-2 text-sm font-medium cursor-pointer hover:bg-primary hover:text-white ${path=='/dashboard/history' && 'bg-primary text-white' }`}
               prefetch={false}
             >
-              <ClockIcon className="h-5 w-5" />
+              {/* <ClockIcon className="h-5 w-5" /> */}
+              <FileClock />
               History
             </Link>
             <Link
@@ -105,7 +107,8 @@ function SideNav() {
               className={`flex items-center mb-3 gap-3 rounded-md px-3 py-2 text-sm font-medium cursor-pointer hover:bg-primary hover:text-white ${path=='/dashboard/billing' && 'bg-primary text-white' }`}
               prefetch={false}
             >
-              <CreditCardIcon className="h-5 w-5" />
+              {/* <CreditCardIcon className="h-5 w-5" /> */}
+              <WalletCards/>
               Billing
             </Link>
             <Link
@@ -113,7 +116,8 @@ function SideNav() {
               className={`flex items-center mb-3 gap-3 rounded-md px-3 py-2 text-sm font-medium cursor-pointer hover:bg-primary hover:text-white ${path=='/dashboard/setting' && 'bg-primary text-white' }`}
               prefetch={false}
             >
-              <SettingsIcon className="h-5 w-5" />
+              {/* <SettingsIcon className="h-5 w-5" /> */}
+              <Settings/>
               Settings
             </Link>
           </nav>
@@ -124,7 +128,8 @@ function SideNav() {
         <Sheet >
           <SheetTrigger asChild>
             <Button variant="outline" className="shrink-0 md:hidden">
-              <MenuIcon className="h-5 w-5" />
+              {/* <MenuIcon className="h-5 w-5" /> */}
+              <MenuIcon className='h-5 w-5'/>
               <span className="sr-only">Toggle navigation</span>
             </Button>
           </SheetTrigger>
@@ -149,7 +154,8 @@ function SideNav() {
                  className={`flex items-center mb-3 gap-3 rounded-md px-3 py-2 text-sm font-medium cursor-pointer hover:bg-primary hover:text-white ${path=='/dashboard/history' && 'bg-primary text-white' }`}
                 prefetch={false}
               >
-                <ClockIcon className="h-5 w-5" />
+                {/* <ClockIcon className="h-5 w-5" /> */}
+                <FileClock/>
                 History
               </Link>
               <Link
@@ -157,7 +163,8 @@ function SideNav() {
                 className={`flex items-center mb-3 gap-3 rounded-md px-3 py-2 text-sm font-medium cursor-pointer hover:bg-primary hover:text-white ${path=='/dashboard/billing' && 'bg-primary text-white' }`}
                 prefetch={false}
               >
-                <CreditCardIcon className="h-5 w-5" />
+                {/* <CreditCardIcon className="h-5 w-5" /> */}
+                <WalletCards/>
                 Billing
               </Link>
               <Link
@@ -165,7 +172,8 @@ function SideNav() {
                 className={`flex items-center mb-3 gap-3 rounded-md px-3 py-2 text-sm font-medium cursor-pointer hover:bg-primary hover:text-white ${path=='/dashboard/setting' && 'bg-primary text-white' }`}
                 prefetch={false}
               >
-                <SettingsIcon className="h-5 w-5" />
+                {/* <SettingsIcon className="h-5 w-5" /> */}
+                <Settings/>
                 Settings
               </Link>
             </nav>
@@ -267,10 +275,12 @@ function SideNav() {
           </CarouselItem>
         </CarouselContent>
         <CarouselPrevious className="absolute top-1/2 -translate-y-1/2 left-4 z-10 bg-background/50 hover:bg-background/75 rounded-full p-2 transition-colors">
-          <ChevronLeftIcon className="w-6 h-6 text-primary" />
+          {/* <ChevronLeftIcon className="w-6 h-6 text-primary" /> */}
+          <ChevronLeftIcon/>
         </CarouselPrevious>
         <CarouselNext className="absolute top-1/2 -translate-y-1/2 right-4 z-10 bg-background/50 hover:bg-background/75 rounded-full p-2 transition-colors">
-          <ChevronRightIcon className="w-6 h-6 text-primary" />
+          {/* <ChevronRightIcon className="w-6 h-6 text-primary" /> */}
+          <ChevronRightIcon/>
         </CarouselNext>
       </Carousel>
     </div>
@@ -288,212 +298,212 @@ function SideNav() {
 
   }
 
-  function ClockIcon(props) {
-    return (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <circle cx="12" cy="12" r="10" />
-        <polyline points="12 6 12 12 16 14" />
-      </svg>
-    )
-  }
+  // function ClockIcon(props) {
+  //   return (
+  //     <svg
+  //       {...props}
+  //       xmlns="http://www.w3.org/2000/svg"
+  //       width="24"
+  //       height="24"
+  //       viewBox="0 0 24 24"
+  //       fill="none"
+  //       stroke="currentColor"
+  //       strokeWidth="2"
+  //       strokeLinecap="round"
+  //       strokeLinejoin="round"
+  //     >
+  //       <circle cx="12" cy="12" r="10" />
+  //       <polyline points="12 6 12 12 16 14" />
+  //     </svg>
+  //   )
+  // }
   
   
-  function CreditCardIcon(props) {
-    return (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <rect width="20" height="14" x="2" y="5" rx="2" />
-        <line x1="2" x2="22" y1="10" y2="10" />
-      </svg>
-    )
-  }
+  // function CreditCardIcon(props) {
+  //   return (
+  //     <svg
+  //       {...props}
+  //       xmlns="http://www.w3.org/2000/svg"
+  //       width="24"
+  //       height="24"
+  //       viewBox="0 0 24 24"
+  //       fill="none"
+  //       stroke="currentColor"
+  //       strokeWidth="2"
+  //       strokeLinecap="round"
+  //       strokeLinejoin="round"
+  //     >
+  //       <rect width="20" height="14" x="2" y="5" rx="2" />
+  //       <line x1="2" x2="22" y1="10" y2="10" />
+  //     </svg>
+  //   )
+  // }
   
   
-  function HomeIcon(props) {
-    return (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-        <polyline points="9 22 9 12 15 12 15 22" />
-      </svg>
-    )
-  }
+  // function HomeIcon(props) {
+  //   return (
+  //     <svg
+  //       {...props}
+  //       xmlns="http://www.w3.org/2000/svg"
+  //       width="24"
+  //       height="24"
+  //       viewBox="0 0 24 24"
+  //       fill="none"
+  //       stroke="currentColor"
+  //       strokeWidth="2"
+  //       strokeLinecap="round"
+  //       strokeLinejoin="round"
+  //     >
+  //       <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+  //       <polyline points="9 22 9 12 15 12 15 22" />
+  //     </svg>
+  //   )
+  // }
   
   
-  function MenuIcon(props) {
-    return (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <line x1="4" x2="20" y1="12" y2="12" />
-        <line x1="4" x2="20" y1="6" y2="6" />
-        <line x1="4" x2="20" y1="18" y2="18" />
-      </svg>
-    )
-  }
+  // function MenuIcon(props) {
+  //   return (
+  //     <svg
+  //       {...props}
+  //       xmlns="http://www.w3.org/2000/svg"
+  //       width="24"
+  //       height="24"
+  //       viewBox="0 0 24 24"
+  //       fill="none"
+  //       stroke="currentColor"
+  //       strokeWidth="2"
+  //       strokeLinecap="round"
+  //       strokeLinejoin="round"
+  //     >
+  //       <line x1="4" x2="20" y1="12" y2="12" />
+  //       <line x1="4" x2="20" y1="6" y2="6" />
+  //       <line x1="4" x2="20" y1="18" y2="18" />
+  //     </svg>
+  //   )
+  // }
   
   
-  function MountainIcon(props) {
-    return (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
-      </svg>
-    )
-  }
+  // function MountainIcon(props) {
+  //   return (
+  //     <svg
+  //       {...props}
+  //       xmlns="http://www.w3.org/2000/svg"
+  //       width="24"
+  //       height="24"
+  //       viewBox="0 0 24 24"
+  //       fill="none"
+  //       stroke="currentColor"
+  //       strokeWidth="2"
+  //       strokeLinecap="round"
+  //       strokeLinejoin="round"
+  //     >
+  //       <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
+  //     </svg>
+  //   )
+  // }
   
   
-  function SettingsIcon(props) {
-    return (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
-        <circle cx="12" cy="12" r="3" />
-      </svg>
-    )
-  }
+  // function SettingsIcon(props) {
+  //   return (
+  //     <svg
+  //       {...props}
+  //       xmlns="http://www.w3.org/2000/svg"
+  //       width="24"
+  //       height="24"
+  //       viewBox="0 0 24 24"
+  //       fill="none"
+  //       stroke="currentColor"
+  //       strokeWidth="2"
+  //       strokeLinecap="round"
+  //       strokeLinejoin="round"
+  //     >
+  //       <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
+  //       <circle cx="12" cy="12" r="3" />
+  //     </svg>
+  //   )
+  // }
   
   
-  function XIcon(props) {
-    return (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M18 6 6 18" />
-        <path d="m6 6 12 12" />
-      </svg>
-    )
-  }
+  // function XIcon(props) {
+  //   return (
+  //     <svg
+  //       {...props}
+  //       xmlns="http://www.w3.org/2000/svg"
+  //       width="24"
+  //       height="24"
+  //       viewBox="0 0 24 24"
+  //       fill="none"
+  //       stroke="currentColor"
+  //       strokeWidth="2"
+  //       strokeLinecap="round"
+  //       strokeLinejoin="round"
+  //     >
+  //       <path d="M18 6 6 18" />
+  //       <path d="m6 6 12 12" />
+  //     </svg>
+  //   )
+  // }
 
 
-  function ArrowRightIcon(props) {
-    return (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M5 12h14" />
-        <path d="m12 5 7 7-7 7" />
-      </svg>
-    )
-  }
+  // function ArrowRightIcon(props) {
+  //   return (
+  //     <svg
+  //       {...props}
+  //       xmlns="http://www.w3.org/2000/svg"
+  //       width="24"
+  //       height="24"
+  //       viewBox="0 0 24 24"
+  //       fill="none"
+  //       stroke="currentColor"
+  //       strokeWidth="2"
+  //       strokeLinecap="round"
+  //       strokeLinejoin="round"
+  //     >
+  //       <path d="M5 12h14" />
+  //       <path d="m12 5 7 7-7 7" />
+  //     </svg>
+  //   )
+  // }
   
   
-  function ChevronLeftIcon(props) {
-    return (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="m15 18-6-6 6-6" />
-      </svg>
-    )
-  }
+  // function ChevronLeftIcon(props) {
+  //   return (
+  //     <svg
+  //       {...props}
+  //       xmlns="http://www.w3.org/2000/svg"
+  //       width="24"
+  //       height="24"
+  //       viewBox="0 0 24 24"
+  //       fill="none"
+  //       stroke="currentColor"
+  //       strokeWidth="2"
+  //       strokeLinecap="round"
+  //       strokeLinejoin="round"
+  //     >
+  //       <path d="m15 18-6-6 6-6" />
+  //     </svg>
+  //   )
+  // }
   
   
-  function ChevronRightIcon(props) {
-    return (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="m9 18 6-6-6-6" />
-      </svg>
-    )
-  }
+  // function ChevronRightIcon(props) {
+  //   return (
+  //     <svg
+  //       {...props}
+  //       xmlns="http://www.w3.org/2000/svg"
+  //       width="24"
+  //       height="24"
+  //       viewBox="0 0 24 24"
+  //       fill="none"
+  //       stroke="currentColor"
+  //       strokeWidth="2"
+  //       strokeLinecap="round"
+  //       strokeLinejoin="round"
+  //     >
+  //       <path d="m9 18 6-6-6-6" />
+  //     </svg>
+  //   )
+  // }
   
   
 
