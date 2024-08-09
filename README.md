@@ -1,7 +1,7 @@
 <div align="center">
   <br />
     <a href="https://youtu.be/oKIThIihv60" target="_blank">
-      <img src="https://github.com/JavaScript-Mastery-Pro/figma-ts/assets/151519281/e03dc22d-0f45-464b-9dc3-f01f07906bee" alt="Project Banner">
+      <img src="![ContentGen](https://github.com/user-attachments/assets/53985bfa-3c7b-46f2-9183-c63412eb1b93)" alt="Project Banner">
     </a>
   <br />
 
